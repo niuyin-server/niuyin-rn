@@ -18,6 +18,7 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
+        tabBarShowLabel: false,
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',
@@ -29,9 +30,11 @@ export default function TabLayout() {
             borderTopColor: colorScheme === 'dark' ? '#374151' : '#E5E7EB',
           },
         }),
-        tabBarLabelStyle: {
-          fontSize: 10,
-          fontWeight: '500',
+        tabBarItemStyle: {
+          paddingTop: 8,
+          paddingBottom: 8,
+          justifyContent: 'center',
+          alignItems: 'center',
         },
       }}>
       <Tabs.Screen
@@ -59,8 +62,8 @@ export default function TabLayout() {
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons 
               name="sparkles" 
-              size={focused ? size + 4 : size} 
-              color={focused ? '#3B82F6' : color} 
+              size={focused ? 28 : 26} 
+              color="#3B82F6"
             />
           ),
         }}
