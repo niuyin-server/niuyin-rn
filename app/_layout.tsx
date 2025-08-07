@@ -50,7 +50,11 @@ export default function RootLayout() {
         <Stack.Screen name="details/[id]" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
+      <StatusBar 
+        style={colorScheme === 'dark' ? 'light' : 'dark'}
+        backgroundColor={colorScheme === 'dark' ? '#111827' : '#FAFAFA'}
+        translucent={false}
+      />
     </ThemeProvider>
   );
 }
