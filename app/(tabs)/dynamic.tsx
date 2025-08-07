@@ -383,9 +383,6 @@ export default function DynamicScreen() {
       <Text style={[styles.authorName, { color: isDark ? '#F9FAFB' : '#1F2937' }]}>
         {item.name}
       </Text>
-      {item.hasUpdate && (
-        <Text style={styles.updateHint}>有新作品</Text>
-      )}
     </TouchableOpacity>
   );
 
@@ -686,6 +683,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 16,
     width: 80,
+    marginTop: 8
   },
   avatarContainer: {
     position: 'relative',
